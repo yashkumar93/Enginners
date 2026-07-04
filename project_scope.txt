@@ -1,0 +1,1 @@
+The project scope includes analyzing the user's software request, identifying functional and non-functional requirements, defining the project scope, prioritizing features, identifying potential risks, and creating a structured development roadmap.

@@ -1,0 +1,315 @@
+{
+  // Display name for this crew
+  "name": "AI_Engineering_optimization",
+
+  // Agents to include — each must have a matching agents/<name>.jsonc file
+  "agents": ["project_manager", "software_architect", "backend_engineer", "frontend_engineer", "qa_engineer", "devops_engineer"],
+
+  // Task definitions — executed in order for sequential process
+  "tasks": [
+    {
+      // Task identifier
+      "name": "analyze_the_users_software_task",
+
+      // What the task should accomplish
+      // Use {placeholder} inputs here; crewai run prompts for missing values
+      "description": "Analyze the user's software request, identify the functional and non-functional requirements, define the project scope, prioritize features, identify potential risks, and create a structured development roadmap for the engineering team.",
+
+      // Clear definition of what the output should look like
+      "expected_output": "A comprehensive requirements document containing project objectives, functional requirements, non-functional requirements, prioritized feature list, project scope, assumptions, risks, and development milestones.",
+
+      // Optional task guardrail(s) validate output before completion
+      // Use "guardrail" for one rule or "guardrails" for many
+      // Failed guardrails retry up to guardrail_max_retries times
+      // "guardrail": "Every factual claim needs context support.",
+      // "guardrails": [
+      //   "Every factual claim must be supported by context.",
+      //   "The answer must match the expected output format."
+      // ],
+      // "guardrail_max_retries": 2,
+
+      // Advanced task options:
+      // Docs: https://docs.crewai.com/concepts/tasks
+      // "type": "ConditionalTask",
+      // "condition": { "python": "my_project.conditions.should_run" },
+      // "output_json": { "python": "my_project.models.ReportOutput" },
+      // "output_pydantic": null,
+      // "response_model": null,
+      // "converter_cls": { "python": "my_project.converters.CustomConverter" },
+      // "markdown": false,
+      // "input_files": { "brief": "data/brief.txt" },
+      // "security_config": {},
+
+      // Which agent handles this task
+      "agent": "project_manager"
+
+      // "tools": [],
+      // "human_input": false,
+      // "async_execution": false
+    }
+,
+    {
+      // Task identifier
+      "name": "design_the_overall_software_task",
+
+      // What the task should accomplish
+      // Use {placeholder} inputs here; crewai run prompts for missing values
+      "description": "Design the overall software architecture based on the approved requirements. Select the technology stack, define system components, database schema, API specifications, project folder structure, and deployment strategy while ensuring scalability, maintainability, and security.",
+
+      // Clear definition of what the output should look like
+      "expected_output": "A complete architecture document including technology stack, database schema, API endpoints, project directory structure, architectural diagrams (if applicable), and implementation recommendations.",
+
+      // Optional task guardrail(s) validate output before completion
+      // Use "guardrail" for one rule or "guardrails" for many
+      // Failed guardrails retry up to guardrail_max_retries times
+      // "guardrail": "Every factual claim needs context support.",
+      // "guardrails": [
+      //   "Every factual claim must be supported by context.",
+      //   "The answer must match the expected output format."
+      // ],
+      // "guardrail_max_retries": 2,
+
+      // Advanced task options:
+      // Docs: https://docs.crewai.com/concepts/tasks
+      // "type": "ConditionalTask",
+      // "condition": { "python": "my_project.conditions.should_run" },
+      // "output_json": { "python": "my_project.models.ReportOutput" },
+      // "output_pydantic": null,
+      // "response_model": null,
+      // "converter_cls": { "python": "my_project.converters.CustomConverter" },
+      // "markdown": false,
+      // "input_files": { "brief": "data/brief.txt" },
+      // "security_config": {},
+
+      // Which agent handles this task
+      "agent": "software_architect"
+
+      // "tools": [],
+      // "human_input": false,
+      // "async_execution": false
+    }
+,
+    {
+      // Task identifier
+      "name": "implement_the_backend_application_task",
+
+      // What the task should accomplish
+      // Use {placeholder} inputs here; crewai run prompts for missing values
+      "description": "Implement the backend application according to the approved architecture. Develop REST APIs, authentication, business logic, database models, validation, error handling, and integrations while following software engineering best practices.",
+
+      // Clear definition of what the output should look like
+      "expected_output": "Production-ready backend source code with REST APIs, database models, authentication, documentation, and clean modular architecture.",
+
+      // Optional task guardrail(s) validate output before completion
+      // Use "guardrail" for one rule or "guardrails" for many
+      // Failed guardrails retry up to guardrail_max_retries times
+      // "guardrail": "Every factual claim needs context support.",
+      // "guardrails": [
+      //   "Every factual claim must be supported by context.",
+      //   "The answer must match the expected output format."
+      // ],
+      // "guardrail_max_retries": 2,
+
+      // Advanced task options:
+      // Docs: https://docs.crewai.com/concepts/tasks
+      // "type": "ConditionalTask",
+      // "condition": { "python": "my_project.conditions.should_run" },
+      // "output_json": { "python": "my_project.models.ReportOutput" },
+      // "output_pydantic": null,
+      // "response_model": null,
+      // "converter_cls": { "python": "my_project.converters.CustomConverter" },
+      // "markdown": false,
+      // "input_files": { "brief": "data/brief.txt" },
+      // "security_config": {},
+
+      // Which agent handles this task
+      "agent": "backend_engineer",
+
+      // Task outputs used as context
+      "context": ["analyze_the_users_software_task", "design_the_overall_software_task"]
+
+      // "tools": [],
+      // "human_input": false,
+      // "async_execution": false
+    }
+,
+    {
+      // Task identifier
+      "name": "develop_a_modern_responsive_task",
+
+      // What the task should accomplish
+      // Use {placeholder} inputs here; crewai run prompts for missing values
+      "description": "Develop a modern, responsive, and user-friendly frontend application based on the project requirements and architecture. Build reusable UI components, integrate backend APIs, manage application state, and ensure accessibility and responsive design.",
+
+      // Clear definition of what the output should look like
+      "expected_output": "A fully functional frontend application with reusable components, API integration, responsive layouts, navigation, and clean project structure.",
+
+      // Optional task guardrail(s) validate output before completion
+      // Use "guardrail" for one rule or "guardrails" for many
+      // Failed guardrails retry up to guardrail_max_retries times
+      // "guardrail": "Every factual claim needs context support.",
+      // "guardrails": [
+      //   "Every factual claim must be supported by context.",
+      //   "The answer must match the expected output format."
+      // ],
+      // "guardrail_max_retries": 2,
+
+      // Advanced task options:
+      // Docs: https://docs.crewai.com/concepts/tasks
+      // "type": "ConditionalTask",
+      // "condition": { "python": "my_project.conditions.should_run" },
+      // "output_json": { "python": "my_project.models.ReportOutput" },
+      // "output_pydantic": null,
+      // "response_model": null,
+      // "converter_cls": { "python": "my_project.converters.CustomConverter" },
+      // "markdown": false,
+      // "input_files": { "brief": "data/brief.txt" },
+      // "security_config": {},
+
+      // Which agent handles this task
+      "agent": "frontend_engineer",
+
+      // Task outputs used as context
+      "context": ["analyze_the_users_software_task", "design_the_overall_software_task", "implement_the_backend_application_task"]
+
+      // "tools": [],
+      // "human_input": false,
+      // "async_execution": false
+    }
+,
+    {
+      // Task identifier
+      "name": "review_the_generated_backend_task",
+
+      // What the task should accomplish
+      // Use {placeholder} inputs here; crewai run prompts for missing values
+      "description": "Review the generated backend and frontend code, identify bugs, security vulnerabilities, performance issues, and code quality concerns. Verify that the implementation satisfies all project requirements and recommend improvements before deployment.",
+
+      // Clear definition of what the output should look like
+      "expected_output": "A detailed quality assurance report including detected issues, code review comments, testing summary, security observations, performance recommendations, and final approval status.",
+
+      // Optional task guardrail(s) validate output before completion
+      // Use "guardrail" for one rule or "guardrails" for many
+      // Failed guardrails retry up to guardrail_max_retries times
+      // "guardrail": "Every factual claim needs context support.",
+      // "guardrails": [
+      //   "Every factual claim must be supported by context.",
+      //   "The answer must match the expected output format."
+      // ],
+      // "guardrail_max_retries": 2,
+
+      // Advanced task options:
+      // Docs: https://docs.crewai.com/concepts/tasks
+      // "type": "ConditionalTask",
+      // "condition": { "python": "my_project.conditions.should_run" },
+      // "output_json": { "python": "my_project.models.ReportOutput" },
+      // "output_pydantic": null,
+      // "response_model": null,
+      // "converter_cls": { "python": "my_project.converters.CustomConverter" },
+      // "markdown": false,
+      // "input_files": { "brief": "data/brief.txt" },
+      // "security_config": {},
+
+      // Which agent handles this task
+      "agent": "qa_engineer",
+
+      // Task outputs used as context
+      "context": ["implement_the_backend_application_task", "develop_a_modern_responsive_task"]
+
+      // "tools": [],
+      // "human_input": false,
+      // "async_execution": false
+    }
+,
+    {
+      // Task identifier
+      "name": "prepare_the_application_for_task",
+
+      // What the task should accomplish
+      // Use {placeholder} inputs here; crewai run prompts for missing values
+      "description": "Prepare the application for production by creating Docker configurations, CI/CD pipelines, deployment scripts, environment configurations, and deployment documentation. Validate the deployment process and ensure the application is production-ready.",
+
+      // Clear definition of what the output should look like
+      "expected_output": "Deployment-ready artifacts including Dockerfiles, container configuration, CI/CD workflow, deployment scripts, environment setup instructions, and deployment status report.",
+
+      // Optional task guardrail(s) validate output before completion
+      // Use "guardrail" for one rule or "guardrails" for many
+      // Failed guardrails retry up to guardrail_max_retries times
+      // "guardrail": "Every factual claim needs context support.",
+      // "guardrails": [
+      //   "Every factual claim must be supported by context.",
+      //   "The answer must match the expected output format."
+      // ],
+      // "guardrail_max_retries": 2,
+
+      // Advanced task options:
+      // Docs: https://docs.crewai.com/concepts/tasks
+      // "type": "ConditionalTask",
+      // "condition": { "python": "my_project.conditions.should_run" },
+      // "output_json": { "python": "my_project.models.ReportOutput" },
+      // "output_pydantic": null,
+      // "response_model": null,
+      // "converter_cls": { "python": "my_project.converters.CustomConverter" },
+      // "markdown": false,
+      // "input_files": { "brief": "data/brief.txt" },
+      // "security_config": {},
+
+      // Which agent handles this task
+      "agent": "devops_engineer",
+
+      // Task outputs used as context
+      "context": ["implement_the_backend_application_task", "develop_a_modern_responsive_task", "review_the_generated_backend_task"]
+
+      // "tools": [],
+      // "human_input": false,
+      // "async_execution": false
+    }
+
+  ],
+
+  // Execution process
+  // "sequential" — tasks run in order, each receiving prior task outputs
+  // "hierarchical" — a manager agent delegates tasks (requires manager_llm)
+  "process": "sequential",
+
+  // Enable verbose logging during execution
+  "verbose": true,
+
+  // Enable crew memory — persists context and learnings across tasks
+  "memory": true,
+
+  // Automatically plan the execution strategy before running tasks
+  // "planning": false,
+
+  // LLM for the planning step (used when planning is true)
+  // "planning_llm": "openai/gpt-4o",
+
+  // LLM for the manager agent (required when process is "hierarchical")
+  // "manager_llm": "openai/gpt-4o",
+
+  // Crew-level LLM fields also accept object form for custom endpoints
+  // "chat_llm": {"model": "llama3", "provider": "ollama", "base_url": "http://localhost:11434"},
+
+  // Advanced crew options:
+  // Docs: https://docs.crewai.com/concepts/crews
+  // For hierarchical crews, manager_agent can reference an agents/<name>.jsonc file
+  // that is not included in the "agents" list.
+  // "manager_agent": "project_manager",
+  // "before_kickoff_callbacks": [{"python": "my_project.callbacks.before_kickoff"}],
+  // "after_kickoff_callbacks": [{"python": "my_project.callbacks.after_kickoff"}],
+  // "function_calling_llm": "openai/gpt-4o-mini",
+  // "max_rpm": null,
+  // "cache": true,
+  // "knowledge_sources": [],
+  "embedder": {"python": "llm.router.crew_embedder"},
+  // "output_log_file": "crew.log",
+  // "stream": false,
+  // "tracing": false,
+  // "security_config": {},
+
+  // Optional runtime input defaults.
+  // Use {placeholder} in agent or task text, for example:
+  // "description": "Research {topic} and write a brief"
+  // `crewai run` prompts for any placeholders missing from this object.
+  "inputs": {}
+}

@@ -1,0 +1,302 @@
+[INFO] 2026-07-04 13:12:03 | LLM Router initialised — providers: groq | agents mapped: 6
+[INFO] 2026-07-04 13:12:03 | Agent: Backend Engineer | Provider: Groq | Key: 1 | Model: llama-3.3-70b-versatile | Latency: 1.84s | Retries: 1 | Status: Success
+[INFO] 2026-07-04 13:17:28 | LLM Router initialised — providers: groq | agents mapped: 6
+[INFO] 2026-07-04 13:17:42 | LLM Router initialised — providers: groq | agents mapped: 6
+[INFO] 2026-07-04 13:26:41 | LLM Router initialised — providers: groq | agents mapped: 6
+[INFO] 2026-07-04 13:31:50 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:32:43 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:32:58 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:34:35 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:35:41 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:37:54 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:38:16 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:38:24 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:39:04 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:39:08 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:39:10 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 1.78s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:39:11 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:39:11 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.50s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:39:12 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:39:12 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.05s | Retries: 0 | Status: Failed (BadRequestError: litellm.BadRequestError: GroqException - {"error":{"message":"'messages.0' : for 'role:system' the following must be satisfied[('messages.0' : property 'cache_breakpoint' is unsupported)]","type":"invalid_request_error"}}
+)
+[INFO] 2026-07-04 13:45:24 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:45:45 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:45:49 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:45:51 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 1.88s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:45:51 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:45:52 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.79s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:45:53 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:45:55 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 2.58s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:45:55 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:45:55 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.05s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4205, Requested 2096. Please try again in 3.01s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:45:55 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4205, Requested 2096. Please try again in 3.01s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:45:55 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.05s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4200, Requested 2096. Please try again in 2.96s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:45:55 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4200, Requested 2096. Please try again in 2.96s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:45:55 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4196, Requested 2370. Please try again in 5.66s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:45:55 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4196, Requested 2370. Please try again in 5.66s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:45:55 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.01s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:56 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:56 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:56 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:56 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:56 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:56 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:56 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:56 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:56 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:56 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:57 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:57 | Agent: Software Architect | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:57 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:57 | Agent: Software Architect | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:57 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:57 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:57 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:58 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:58 | Agent: Software Architect | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:58 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:58 | Agent: Software Architect | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:58 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:58 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:58 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:58 | Agent: Software Architect | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:45:58 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:45:58 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:45:58 | Agent: Software Architect | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:49:17 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:50:56 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:51:02 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:51:04 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 1.73s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:51:04 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:51:07 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 2.06s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:51:07 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:51:07 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.07s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3462, Requested 3695. Please try again in 11.57s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:51:07 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3462, Requested 3695. Please try again in 11.57s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:51:07 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3457, Requested 3966. Please try again in 14.23s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:51:07 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3457, Requested 3966. Please try again in 14.23s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:51:08 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3453, Requested 3695. Please try again in 11.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:51:08 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3453, Requested 3695. Please try again in 11.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:51:08 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:51:08 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:51:08 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:51:08 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:51:08 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:51:08 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:51:08 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:51:08 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:08 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:51:08 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:51:09 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:51:09 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:09 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:09 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:51:09 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:51:09 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:51:09 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:09 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:51:09 | All keys on cooldown for 'groq', skipping to next provider
+[WARNING] 2026-07-04 13:51:09 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 0.00s | Retries: 3 | Status: Failed (ImportError: Google Gen AI native provider not available, to install: uv add "crewai[google-genai]")
+[INFO] 2026-07-04 13:53:25 | LLM Router initialised — providers: gemini, groq | agents mapped: 6
+[INFO] 2026-07-04 13:53:32 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:53:33 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 1.54s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:53:34 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:53:35 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 1.17s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:53:36 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:53:36 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.07s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2749, Requested 3966. Please try again in 7.15s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:53:36 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2749, Requested 3966. Please try again in 7.15s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:53:36 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2745, Requested 3861. Please try again in 6.06s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:53:36 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2745, Requested 3861. Please try again in 6.06s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:53:36 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2741, Requested 5073. Please try again in 18.14s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:53:36 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 2741, Requested 5073. Please try again in 18.14s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[INFO] 2026-07-04 13:53:57 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 21.16s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:53:57 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:53:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:53:57 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:53:57 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:54:04 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 7.23s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:54:05 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:54:05 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:54:05 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:05 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:05 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:05 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:05 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:05 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:54:12 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 7.23s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:54:34 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 29.43s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:54:34 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:54:34 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:34 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:34 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:54:42 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 7.45s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:54:42 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:54:43 | Agent: Software Architect | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.13s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7744, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:54:43 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7744, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:54:43 | Agent: Software Architect | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6532, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:54:43 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6532, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:54:43 | Agent: Software Architect | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6637, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:54:43 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6637, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[INFO] 2026-07-04 13:54:50 | Agent: Software Architect | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 7.63s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:54:51 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:54:51 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:51 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:54:51 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:55:48 | Agent: Software Architect | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 56.79s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:55:48 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:55:48 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.13s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12365, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:55:48 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12365, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:55:48 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.05s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12365, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:55:48 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12365, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:55:48 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.05s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12365, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:55:48 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12365, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[INFO] 2026-07-04 13:55:54 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 5.94s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:55:55 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:55:55 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:55:55 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:55:55 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:56:00 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 4.77s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:56:00 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:56:00 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:56:00 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:56:00 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:56:06 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 6.53s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:56:07 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:56:07 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:56:07 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:56:07 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:58:19 | Agent: Backend Engineer | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 132.15s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:58:19 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:58:19 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.19s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 25382, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:58:19 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 25382, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:58:19 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.07s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 25382, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:58:19 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 25382, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:58:19 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.06s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 24004, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:58:19 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 24004, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[INFO] 2026-07-04 13:58:29 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 9.78s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:58:30 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:58:30 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:58:30 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:58:30 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:58:44 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 13.57s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:58:44 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:58:44 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:58:44 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:58:44 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:58:48 | Agent: Project Manager | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 4.57s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:58:49 | Provider switch | Agent: (building attempt sequence) | From: Gemini → To: Groq
+[INFO] 2026-07-04 13:59:09 | Agent: Frontend Engineer | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 19.85s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:59:09 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 13:59:09 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:59:09 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 13:59:09 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 13:59:19 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 10.29s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 13:59:20 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:59:21 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.86s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:59:21 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 13:59:22 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.77s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 13:59:22 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 13:59:22 | Agent: QA Engineer | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.16s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 53373, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:59:22 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 53373, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:59:22 | Agent: QA Engineer | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.08s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 53373, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:59:22 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 53373, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 13:59:23 | Agent: QA Engineer | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.23s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 53373, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 13:59:23 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 53373, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[INFO] 2026-07-04 14:00:36 | Agent: QA Engineer | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 73.03s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 14:00:36 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[INFO] 2026-07-04 14:00:37 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 1.39s | Retries: 0 | Status: Success
+[INFO] 2026-07-04 14:00:38 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[WARNING] 2026-07-04 14:00:38 | Agent: Project Manager | Provider: Groq | Key: 2 | Model: llama-3.1-8b-instant | Latency: 0.06s | Retries: 0 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4149, Requested 3573. Please try again in 17.22s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 14:00:38 | Cooldown activated | Provider: Groq | Key: 2 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4149, Requested 3573. Please try again in 17.22s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 14:00:38 | Agent: Project Manager | Provider: Groq | Key: 0 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 1 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4144, Requested 3973. Please try again in 21.17s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 14:00:38 | Cooldown activated | Provider: Groq | Key: 0 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4144, Requested 3973. Please try again in 21.17s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[WARNING] 2026-07-04 14:00:38 | Agent: Project Manager | Provider: Groq | Key: 1 | Model: llama-3.1-8b-instant | Latency: 0.04s | Retries: 2 | Status: Failed (RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4140, Requested 3573. Please try again in 17.129999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+)
+[WARNING] 2026-07-04 14:00:38 | Cooldown activated | Provider: Groq | Key: 1 | Reason: RateLimitError: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jbsr8pfhffdavkx4pd6733n3` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4140, Requested 3573. Please try again in 17.129999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[INFO] 2026-07-04 14:00:55 | Agent: Project Manager | Provider: Gemini | Key: 2 | Model: gemini-2.5-flash | Latency: 17.24s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 14:00:55 | Provider switch | Agent: (building attempt sequence) | From: Groq → To: Gemini
+[DEBUG] 2026-07-04 14:00:55 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 14:00:55 | All keys on cooldown for 'groq', skipping to next provider
+[DEBUG] 2026-07-04 14:00:55 | All keys on cooldown for 'groq', skipping to next provider
+[INFO] 2026-07-04 14:01:00 | Agent: Project Manager | Provider: Gemini | Key: 0 | Model: gemini-2.5-flash | Latency: 5.10s | Retries: 3 | Status: Success
+[INFO] 2026-07-04 14:01:01 | Provider switch | Agent: (building attempt sequence) | From: Gemini → To: Groq
+[INFO] 2026-07-04 14:04:43 | Agent: DevOps Engineer | Provider: Gemini | Key: 1 | Model: gemini-2.5-flash | Latency: 222.50s | Retries: 0 | Status: Success
