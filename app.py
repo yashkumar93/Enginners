@@ -50,9 +50,9 @@ st.markdown("""
         --accent-emerald: #10b981;
     }
 
-    /* Apply premium typography globally */
-    html, body, [class*="css"], .stMarkdown, p, div, span, button, input, textarea {
-        font-family: 'Outfit', sans-serif !important;
+    /* Apply premium typography globally, avoiding overriding icon web fonts */
+    html, body, .stMarkdown, p, div, button, input, textarea, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
     }
 
     .stApp {
