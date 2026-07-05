@@ -465,13 +465,24 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-    # Retrieve key statuses
+    # Retrieve key statuses safely
     pool = get_provider_pool()
-    groq_provider = pool.get_provider("groq")
-    gemini_provider = pool.get_provider("gemini")
+    
+    groq_keys = 0
+    if "groq" in pool.provider_names:
+        try:
+            groq_provider = pool.get_provider("groq")
+            groq_keys = len(groq_provider.keys)
+        except KeyError:
+            pass
 
-    groq_keys = len(groq_provider.keys) if groq_provider else 0
-    gemini_keys = len(gemini_provider.keys) if gemini_provider else 0
+    gemini_keys = 0
+    if "gemini" in pool.provider_names:
+        try:
+            gemini_provider = pool.get_provider("gemini")
+            gemini_keys = len(gemini_provider.keys)
+        except KeyError:
+            pass
 
     # Provider cards
     providers_data = [
@@ -573,6 +584,14 @@ with tab_input:
             💡 Define Your Software Requirements
         </div>
         """, unsafe_allow_html=True)
+
+        if groq_keys == 0 and gemini_keys == 0:
+            st.warning(
+                "⚠️ **No API Keys Detected**: The application could not find any active API keys in the environment. "
+                "If you are deploying on **Streamlit Community Cloud**, please open the app dashboard, click **Manage app** -> **Settings** -> **Secrets**, "
+                "and paste your API keys (e.g. `GROQ_API_KEY_1=...`, `GEMINI_API_KEY_1=...`). "
+                "If running locally, please verify that they are configured in your `.env` file."
+            )
 
         user_request = st.text_area(
             "Describe the application you want the crew to build:",
