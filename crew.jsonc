@@ -82,7 +82,10 @@
       // "security_config": {},
 
       // Which agent handles this task
-      "agent": "software_architect"
+      "agent": "software_architect",
+
+      // Use requirements analysis as context for architecture design
+      "context": ["analyze_the_users_software_task"]
 
       // "tools": [],
       // "human_input": false,

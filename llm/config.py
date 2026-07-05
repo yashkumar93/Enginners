@@ -42,7 +42,7 @@ if not os.environ.get("GEMINI_API_KEY"):
 # ---------------------------------------------------------------------------
 # Helper: collect keys from env, filtering out empty / unset values
 # ---------------------------------------------------------------------------
-def _load_keys(prefix: str, count: int = 3) -> list[str]:
+def _load_keys(prefix: str, count: int = 4) -> list[str]:
     """Read ``{prefix}_1`` … ``{prefix}_{count}`` from the environment.
 
     Only non-empty strings are included so the provider never attempts

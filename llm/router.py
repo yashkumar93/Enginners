@@ -153,19 +153,33 @@ class RouterLLM(BaseLLM):
             call_kwargs["response_model"] = response_model
 
         # Clean cache_breakpoint key from all messages to prevent provider errors (e.g. Groq)
+        # Covers: plain dicts, LangChain BaseMessage objects, Pydantic models, and strings
+        def _clean_message(msg: Any) -> Any:
+            """Strip cache_breakpoint from a single message regardless of type."""
+            if isinstance(msg, dict):
+                cleaned = msg.copy()
+                cleaned.pop("cache_breakpoint", None)
+                return cleaned
+            # LangChain message objects with additional_kwargs
+            if hasattr(msg, "additional_kwargs") and isinstance(getattr(msg, "additional_kwargs", None), dict):
+                msg.additional_kwargs.pop("cache_breakpoint", None)
+            # Pydantic models or other objects with __dict__
+            if hasattr(msg, "__dict__") and "cache_breakpoint" in msg.__dict__:
+                try:
+                    delattr(msg, "cache_breakpoint")
+                except (AttributeError, TypeError):
+                    pass
+            return msg
+
         if isinstance(messages, list):
-            cleaned_messages = []
-            for msg in messages:
-                if isinstance(msg, dict):
-                    msg_copy = msg.copy()
-                    msg_copy.pop("cache_breakpoint", None)
-                    cleaned_messages.append(msg_copy)
-                elif hasattr(msg, "additional_kwargs") and isinstance(msg.additional_kwargs, dict):
-                    msg.additional_kwargs.pop("cache_breakpoint", None)
-                    cleaned_messages.append(msg)
-                else:
-                    cleaned_messages.append(msg)
-            messages = cleaned_messages
+            messages = [_clean_message(m) for m in messages]
+        elif isinstance(messages, dict):
+            messages = _clean_message(messages)
+        elif isinstance(messages, str):
+            # String messages don't have cache_breakpoint — pass through
+            pass
+        else:
+            messages = _clean_message(messages)
 
         return self._retry.execute_with_retry(
             provider_name=provider_name,
