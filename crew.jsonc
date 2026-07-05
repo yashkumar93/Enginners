@@ -13,7 +13,7 @@
 
       // What the task should accomplish
       // Use {placeholder} inputs here; crewai run prompts for missing values
-      "description": "Analyze the user's software request, identify the functional and non-functional requirements, define the project scope, prioritize features, identify potential risks, and create a structured development roadmap for the engineering team.",
+      "description": "Analyze the user's software request: '{user_request}'. Identify the functional and non-functional requirements, define the project scope, prioritize features, identify potential risks, and create a structured development roadmap for the engineering team.",
 
       // Clear definition of what the output should look like
       "expected_output": "A comprehensive requirements document containing project objectives, functional requirements, non-functional requirements, prioritized feature list, project scope, assumptions, risks, and development milestones.",
